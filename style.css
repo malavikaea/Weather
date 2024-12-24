@@ -1,9 +1,17 @@
 body{
-    text-align: center;
+    
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    height: 100vh; 
+    text-align: center;width: 100%;
+    align-content: center;
+    justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     background-color: antiquewhite;
     margin: 40;
-    align-items: center;
+    
 }
 .weatherfrom{
 
@@ -12,7 +20,7 @@ body{
 .cityInput{
     padding: 10px;
     border: 2px ;
-    margin: 10px;
+    margin: 20px;
     width: 300 px;
     border: none;
     border-radius: 5px;
@@ -35,14 +43,43 @@ button[type="submit"]:hover{
     padding: 50px;
     box-shadow: transparent;
     min-width: 300px;
-   
+    flex-direction: column;
     align-items: center;
+    border-radius: 10px;
 }
 h1{
-    font-size: larger;
+    font-size: large;
     margin-bottom: 30px;
     margin-top: 0px;
+    
+    font-family: helvetica;
 }
 p{
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
+.cityDis,.TempDis{
+
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.humidityDis{
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.descDis{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2 rem;
+}
+.emoji{
+    font-size: 6rem;
+    margin: 0%;
+    
+}
+.errorDisplay{
+
+    font-size: 1rem;
+    color: rgb(44, 18, 88);
+    font-style: italic;
+}
+
