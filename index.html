@@ -1,8 +1,27 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title> web page</title>
+      <link rel="stylesheet" href="style.css">
+      <meta charset="UTF-8">
+      <meta name ="viewport" content="width=device-width">
+       
+      <title>weather</title>
+        
     </head>
     <body>
-      <h1></h1>  
+      <h1>Get weather</h1> 
+      <form class="weatherform">
+        <input type="text" class ="cityInput" placeholder="Enter city">
+        <button type="submit">Get Weather</button>
+      </form>
+      <div class ="card">
+        <h1 class ="city">Mumbai</h1>
+        <p class="TempDis ">32</p>
+        <p class="humidity">Humdity : 50%</p>
+        <p class="desc">Clear Skies</p>
+        <p class="Error">Cannot find weather of the location </p>
+
+      </div>
+      <script src="index.js"></script>
     </body>
 </html>

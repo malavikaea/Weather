@@ -1,0 +1,48 @@
+body{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+    margin: 40;
+    align-items: center;
+}
+.weatherfrom{
+
+    margin: 30px;
+}
+.cityInput{
+    padding: 10px;
+    border: 2px ;
+    margin: 10px;
+    width: 300 px;
+    border: none;
+    border-radius: 5px;
+}
+button[type="submit"]{
+    padding: 10px;
+    font-weight: bold;
+    background-color: cornflowerblue;
+    border: none;
+    border-radius: 5px;
+
+    
+}
+button[type="submit"]:hover{
+    background-color: lightsalmon;
+}
+.card{
+
+    background: linear-gradient(180deg ,lightsalmon,skyblue);
+    padding: 50px;
+    box-shadow: transparent;
+    min-width: 300px;
+   
+    align-items: center;
+}
+h1{
+    font-size: larger;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+p{
+    font-size: 1.5rem;
+}
