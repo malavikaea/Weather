@@ -10,7 +10,7 @@ A simple weather forecast web application that fetches real-time weather data us
 
 ## 🔗 Live Demo
 
-👉 [Click to visit the live app](/https://weather-zl1k.onrender.com/)  
+👉 [Click to visit the live app](https://weather-zl1k.onrender.com/)  
 
 ---
 
