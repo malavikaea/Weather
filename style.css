@@ -1,17 +1,47 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
 body{
-    
-    margin-top: 5rem;
+    padding-top: 100px;
+    /* margin-top: 5rem; */
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;  
     align-items: center; 
     height: 100vh; 
     text-align: center;width: 100%;
     align-content: center;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: antiquewhite;
-    margin: 40;
+    background:linear-gradient(180deg ,	#75b4e3,#54416d);
+    /* margin: 40; */
     
+}
+.topnav{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    align-items: center; 
+    height: 10vh; 
+    padding: 10px 20px;
+    background-color: #31255a !important;
+    color:#8fe0ff;
+}
+.topnav a {
+    height: 10vh;
+   
+    font-size: x-large;
+    margin-right: 50px;
+    margin-left: auto;
+    padding: 10px 20px 10px;
+    background-color: #2b235a;
+    color: #a7d7ea;
 }
 .weatherfrom{
 
@@ -28,7 +58,7 @@ body{
 button[type="submit"]{
     padding: 10px;
     font-weight: bold;
-    background-color: cornflowerblue;
+    background-color: rgb(31, 34, 40);
     border: none;
     border-radius: 5px;
 
@@ -38,18 +68,22 @@ button[type="submit"]:hover{
     background-color: lightsalmon;
 }
 .card{
-
-    background: linear-gradient(180deg ,lightsalmon,skyblue);
+    max-width: 300px;   
+    background: linear-gradient(180deg ,rgb(175, 164, 160),skyblue);
     padding: 50px;
+    display: flex;
     box-shadow: transparent;
     min-width: 300px;
+    max-height: 300px;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     border-radius: 10px;
+    align-self: center;
 }
 h1{
-    font-size: large;
-    margin-bottom: 30px;
+    font-size: medium;
+    margin-bottom: 20px;
     margin-top: 0px;
     
     font-family: helvetica;
@@ -59,7 +93,7 @@ p{
 }
 .cityDis,.TempDis{
 
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 .humidityDis{
@@ -72,7 +106,7 @@ p{
     font-size: 2 rem;
 }
 .emoji{
-    font-size: 6rem;
+    font-size: 4rem;
     margin: 0%;
     
 }
@@ -83,3 +117,16 @@ p{
     font-style: italic;
 }
 
+
+
+body.cold {
+  background: linear-gradient(to bottom, #1e3c72, #2a5298); /* Blue cold */
+}
+
+body.mild {
+  background: linear-gradient(to bottom, #f7b733, #fc4a1a); /* Orange warm */
+}
+
+body.hot {
+  background: linear-gradient(to bottom, #ff512f, #dd2476); /* Red hot */
+}

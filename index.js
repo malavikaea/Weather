@@ -4,7 +4,7 @@
 const weatherForm =document.querySelector(".weatherform");
 const cityInput=document.querySelector(".cityInput");
 const card =document.querySelector(".card");
-const apiKey ="656a6a9fbc8da36e2f518ba60c430efc";
+
 
 
 weatherForm.addEventListener("submit", async event => {
@@ -32,7 +32,7 @@ weatherForm.addEventListener("submit", async event => {
 async function getWeatherData(city) {
     
    
-    const apiUrl =`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+    const apiUrl = `http://localhost:5000/weather?q=${city}`;
     const response = await fetch(apiUrl);
 
     if(!response.ok){
@@ -72,7 +72,7 @@ function displayWeather(data){
         card.appendChild(humidityDis);
         card.appendChild(descDis);
         card.appendChild(emoji);
-
+        changeBackground(temp);
 
 }
 function getWeatherEmoji(weatherId){
@@ -105,4 +105,15 @@ function displayError(message){
     card.textContent="";
     card.style.display ="flex";
     card.appendChild(errorDisplay);
+}
+function changeBackground(tempK){
+    const temp = tempK - 273.15;
+    document.body.classList.remove("cold", "mild", "hot");
+    if (temp < 15) {
+        document.body.classList.add("cold");
+    } else if (temp >= 15 && temp < 30) {
+        document.body.classList.add("mild");
+    } else {
+        document.body.classList.add("hot");
+    }
 }
