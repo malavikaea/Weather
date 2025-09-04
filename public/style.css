@@ -19,8 +19,8 @@
     --box-shadow-heavy: 0 15px 40px rgba(0, 0, 0, 0.15);
     --input-focus-border: #88b0eb;
     --error-color: #e74c3c;
-    --font-heading: 'Poppins', sans-serif; /* More modern font for headings */
-    --font-body: 'Open Sans', sans-serif; /* Clean font for body text */
+    --font-heading: 'Poppins', sans-serif; 
+    --font-body: 'Open Sans', sans-serif;
 }
 
 body {
@@ -190,6 +190,8 @@ body.mild { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); }
     box-shadow: var(--box-shadow-heavy);
     border-radius: var(--border-radius-large);
     padding: 35px;
+    display: flex;
+    flex-direction: column;
     width: 100%;
     text-align: center;
     box-sizing: border-box;
@@ -423,14 +425,15 @@ body.mild { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); }
     }
 }
 
-/* =========  ALIGNMENT FIX  ========= */
+
 .card {
-    text-align: left; /* stop center-aligning everything */
+    text-align: left; 
+    
 }
 
 .weather-info {
     display: grid;
-    grid-template-columns: 1fr minmax(260px, 360px); /* text | map */
+    grid-template-columns: 1fr minmax(260px, 360px);
     gap: 24px;
     align-items: start;
 }
