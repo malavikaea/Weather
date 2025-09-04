@@ -1,9 +1,17 @@
+/* Import Poppins and Open Sans from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap');
+
 /* --- Global Styles & Variables --- */
 :root {
     --primary-color: #5b86e5; /* A vibrant blue */
     --secondary-color: #36d1dc; /* A complementary cyan */
     --text-dark: #333333;
     --text-light: #ffffff;
+
+    /* NEW: RGB helpers for rgba() */
+    --primary-rgb: 91, 134, 229;   /* #5b86e5 */
+    --text-dark-rgb: 51, 51, 51;   /* #333333 */
+
     --card-bg: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
     --border-radius-large: 18px;
     --border-radius-small: 10px;
@@ -15,9 +23,6 @@
     --font-body: 'Open Sans', sans-serif; /* Clean font for body text */
 }
 
-/* Import Poppins and Open Sans from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Poppins:wght@400;600;700&display=swap');
-
 body {
     margin: 0;
     font-family: var(--font-body);
@@ -25,13 +30,13 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align content to the top initially */
+    align-items: flex-start;
     padding: 30px 20px;
     box-sizing: border-box;
     overflow-x: hidden;
     position: relative;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%); /* Default gradient */
-    transition: background-color 1s ease, background-image 1s ease; /* Smooth background transitions */
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    transition: background-color 1s ease, background-image 1s ease;
 }
 
 /* --- Dynamic Background Gradient --- */
@@ -43,22 +48,20 @@ body {
     height: 100%;
     z-index: -1;
     transition: opacity 0.5s ease-in-out;
-    opacity: 1; /* Default visible */
+    opacity: 1;
 }
 
-/* Example background classes (JS will apply these) */
-body.hot { background: linear-gradient(135deg, #FF5F6D 0%, #FFC371 100%); } /* Warm colors */
-body.cold { background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%); } /* Cool colors */
-body.mild { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); } /* Greenish/mild colors */
-
+body.hot { background: linear-gradient(135deg, #FF5F6D 0%, #FFC371 100%); }
+body.cold { background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%); }
+body.mild { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); }
 
 /* --- Main Container --- */
 .container {
     width: 100%;
-    max-width: 650px; /* Slightly wider container */
+    max-width: 650px;
     display: flex;
     flex-direction: column;
-    gap: 25px; /* Spacing between elements */
+    gap: 25px;
     align-items: center;
     position: relative;
     z-index: 1;
@@ -74,7 +77,7 @@ body.mild { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); } /* 
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    backdrop-filter: blur(5px); /* Frosted glass effect */
+    backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
 }
 
@@ -120,13 +123,13 @@ body.mild { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); } /* 
 }
 
 .cityInput::placeholder {
-    color: rgba(var(--text-dark), 0.6);
+    color: rgba(var(--text-dark-rgb), 0.6);
 }
 
 .cityInput:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(var(--primary-color), 0.3);
+    box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.3);
     background: var(--card-bg);
 }
 
@@ -155,11 +158,11 @@ body.mild { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); } /* 
     font-size: 1.2em;
 }
 
-/* --- Message Container (Loading/Error) --- */
+/* --- Message Container --- */
 .message-container {
     width: 100%;
     text-align: center;
-    min-height: 40px; /* Reserve space to prevent layout shift */
+    min-height: 40px;
 }
 
 .loading-message {
@@ -203,10 +206,10 @@ body.mild { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); } /* 
 }
 
 .weather-info .weather-icon {
-    font-size: 5em; /* Large icon */
+    font-size: 5em;
     color: var(--primary-color);
     margin-bottom: 10px;
-    animation: float 3s ease-in-out infinite; /* Gentle floating animation */
+    animation: float 3s ease-in-out infinite;
 }
 
 .weather-info .city-name {
@@ -219,7 +222,7 @@ body.mild { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); } /* 
 
 .weather-info .temperature {
     font-family: var(--font-heading);
-    font-size: 3.5em; /* Very large temperature */
+    font-size: 3.5em;
     font-weight: 700;
     margin: 5px 0;
     color: var(--text-dark);
@@ -239,7 +242,7 @@ body.mild { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); } /* 
 }
 
 #map {
-    height: 280px; /* Taller map */
+    height: 280px;
     width: 100%;
     border-radius: var(--border-radius-small);
     margin-top: 25px;
@@ -286,7 +289,6 @@ body.mild { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); } /* 
     width: 1em;
     margin-left: -1em;
 }
-
 
 .about-section p {
     line-height: 1.6;
@@ -418,5 +420,47 @@ body.mild { background: linear-gradient(135deg, #a8ff78 0%, #78ffd6 100%); } /* 
 
     #map {
         height: 200px;
+    }
+}
+
+/* =========  ALIGNMENT FIX  ========= */
+.card {
+    text-align: left; /* stop center-aligning everything */
+}
+
+.weather-info {
+    display: grid;
+    grid-template-columns: 1fr minmax(260px, 360px); /* text | map */
+    gap: 24px;
+    align-items: start;
+}
+
+.weather-info > :not(#map) {
+    grid-column: 1;
+}
+
+#map {
+    grid-column: 2;
+    width: 100%;
+    height: 320px;
+    margin: 0;
+}
+
+.weather-info .city-name {
+    margin: 0 0 6px 0;
+}
+.weather-info .temperature,
+.weather-info .description,
+.weather-info .humidity {
+    margin: 2px 0;
+}
+
+@media (max-width: 900px) {
+    .weather-info {
+        grid-template-columns: 1fr;
+    }
+    #map {
+        grid-column: 1;
+        height: 240px;
     }
 }
