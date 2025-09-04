@@ -16,10 +16,11 @@
       <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
       <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
        
-      <title>weather</title>
+      <title>Weather</title>
         
     </head>
     <body>
+      <div class="background-gradient"></div> <div class="container">
       <div class="topnav" >
         <h2> 🌤️ GET WEATHER </h2>
         <a href="#about">About</a>
@@ -28,14 +29,24 @@
 
       <form class="weatherform">
         <input type="text" class ="cityInput" placeholder="Enter city">
-        <button type="submit">✔️</button>
+        <button type="submit">
+            <i class="fas fa-search"></i> 
+        </button>
       </form>
       <div class ="card" style="display: none;">
         
       </div>
+        <div class="card weather-info" style="display: none;">
+          <div class="weather-icon"></div>
+          <h2 class="city-name"></h2>
+          <p class="temperature"></p>
+          <p class="description"></p>
+          <p class="humidity"></p>
+          <div id="map"></div>
+        </div>
       <br>
       <br><br>
-      <div class="card">     
+<div class="card about-section">     
   <section class="about" id="about">
     
         <h2>🌤️ About GET WEATHER</h2>
